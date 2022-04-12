@@ -6,49 +6,54 @@ public class Main {
 
         DifferentBigO differentBigO = new DifferentBigO();
 
-        int inputSize = Integer.MAX_VALUE;
+        int inputSize = 1000;
 
+        System.out.println("Input size: " + inputSize);
 
         String type = "N";
-        long startTime = System.nanoTime();
+        long startTime = 0;
+        startTime = System.nanoTime();
 
         differentBigO.incIntN(inputSize);
 
-        endTimeForTypeAndInputSize(startTime, type, inputSize);
+        endTimeForTypeAndInputSize(startTime, type);
 
         type = "Sq";
         startTime = System.nanoTime();
 
         differentBigO.incIntNSq(inputSize);
 
-        endTimeForTypeAndInputSize(startTime, type, inputSize);
+        endTimeForTypeAndInputSize(startTime, type);
 
 
-        type = "SqAndMore";
+        type = "Cubed";
         startTime = System.nanoTime();
 
-        differentBigO.incIntNSqAndMore(inputSize);
+        differentBigO.incIntNCubed(inputSize);
 
-        endTimeForTypeAndInputSize(startTime, type, inputSize);
+        endTimeForTypeAndInputSize(startTime, type);
 
 
-        type = "NLogN";
+        type = "SqButDifferentWay";
         startTime = System.nanoTime();
 
-        differentBigO.incIntNLogN(inputSize);
+        differentBigO.incIntNSqNewWay(inputSize);
 
-        endTimeForTypeAndInputSize(startTime, type, inputSize);
+        endTimeForTypeAndInputSize(startTime, type);
 
 
 
     }
 
-    private static void endTimeForTypeAndInputSize(long startTime, String type, int inputSize) {
+    private static void endTimeForTypeAndInputSize(long startTime, String type) {
         long endTime = System.nanoTime();
 
         long duration = endTime - startTime;
 
-        System.out.println(type +"Time in nanoseconds for input Size " + inputSize + " : " + duration);
+        System.out.println("Time complex: " + type);
+        System.out.println("Time in nanoseconds: " + duration);
+        System.out.println("Time in milliseconds: " + duration/1000);
+        System.out.println("\n");
     }
 
 

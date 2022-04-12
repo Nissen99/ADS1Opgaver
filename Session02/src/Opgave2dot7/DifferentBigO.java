@@ -25,7 +25,7 @@ public int incIntNSq(int n){
     return sum;
 }
 
-public int incIntNSqAndMore(int n){
+public int incIntNCubed(int n){
     int sum = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n * n; j++) {
@@ -35,7 +35,7 @@ public int incIntNSqAndMore(int n){
     return sum;
 }
 
-public int incIntNLogN(int n){
+public int incIntNSqNewWay(int n){
     int sum = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < i; j++) {
